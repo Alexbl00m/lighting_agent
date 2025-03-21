@@ -1,4 +1,5 @@
-# streamlit_app.py
+
+import os
 import streamlit as st
 from database import session, ProductSpec
 from pdf_utils import extract_pdf_text
