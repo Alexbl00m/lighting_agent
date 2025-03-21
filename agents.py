@@ -1,6 +1,4 @@
 import os
-st.write("API-KEY LOADED:", bool(os.getenv("OPENAI_API_KEY")))
-
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
