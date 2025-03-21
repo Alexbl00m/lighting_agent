@@ -1,13 +1,9 @@
-# 📄 agents.py
-from dotenv import load_dotenv
 import os
-load_dotenv()
-
-if not os.getenv("OPENAI_API_KEY"):
-    raise EnvironmentError("❌ OPENAI_API_KEY saknas. Lägg till .env eller exportera variabeln.")
-
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
+
+if not os.getenv("OPENAI_API_KEY"):
+    raise EnvironmentError("❌ OPENAI_API_KEY saknas. Lägg till som GitHub Secret eller miljövariabel.")
 
 creative_agent = ChatOpenAI(model="gpt-4o", temperature=0.7)
 technical_agent = ChatOpenAI(model="gpt-4o", temperature=0)
