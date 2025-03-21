@@ -1,5 +1,5 @@
 # 📄 agents.py
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
 creative_agent = ChatOpenAI(model="gpt-4o", temperature=0.7)
